@@ -1,0 +1,19 @@
+.button-2 {
+  background-color: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--color-cream);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-2:hover {
+  background-color: var(--color-cream);
+  color: var(--color-black);
+  box-shadow: 0 0 12px rgba(237, 237, 214, 0.4);
+  transform: translateY(-2px);
+}

@@ -5,8 +5,6 @@ import './Contact.css';
 export default function Contact() {
   return (
     <div>
-      <Navbar />
-
       <div id="contact" className="contact-container">
         <h1>Want To Reach Out?</h1>
 
