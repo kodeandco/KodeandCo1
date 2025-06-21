@@ -1,0 +1,21 @@
+.button-1 {
+  background-color: var(--color-olive);
+  color: var(--color-black);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--color-black);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(106, 125, 74, 0.6),
+              0 0 20px rgba(0, 0, 0, 0.4) inset;
+}
+
+.button-1:hover {
+  background-color: #5c6f3e;
+  box-shadow: 0 0 15px rgba(106, 125, 74, 0.8),
+              0 0 25px rgba(0, 0, 0, 0.5) inset;
+  transform: translateY(-2px);
+}
