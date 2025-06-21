@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Contact from './sections/Contact'
 import Button1 from './components/Button1'
 import Button2 from './components/Button2'
+import About from './sections/About'
 
 function App() {
   
@@ -11,9 +12,10 @@ function App() {
     <>
  
        <Navbar/> 
+       <About/>
        <Contact/>
-       <Button1 text="hey"/>
-       <Button2 text="hey"/>
+     
+
     </>
   )
 }

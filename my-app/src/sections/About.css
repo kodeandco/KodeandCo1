@@ -1,0 +1,88 @@
+/* Container */
+.about-container {
+  background-color: var(--color-black);
+  color: var(--color-cream);
+  padding: 5rem 2rem;
+  font-family: var(--font-main);
+}
+
+/* Content Wrapper */
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading */
+.about-content h1 {
+  font-family: var(--font-heading);
+  color: var(--color-olive);
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(106, 125, 74, 0.5);
+}
+
+/* Paragraphs */
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-cream);
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Highlights Grid */
+.about-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Highlight Cards */
+.highlight-card {
+  background-color: #111111;
+  border: 1px solid var(--color-olive);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 0 12px rgba(106, 125, 74, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(106, 125, 74, 0.4);
+}
+
+.highlight-card h3 {
+  color: var(--color-olive);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.highlight-card p {
+  color: var(--color-cream);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
