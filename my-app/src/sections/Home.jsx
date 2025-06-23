@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import OurWork from '../sections/Portfolio';
+import Services from '../sections/Services';
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,44 +18,12 @@ const Home = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const services = [
-    {
-      icon: '🌐',
-      title: 'Web Development',
-      description: 'Modern, responsive websites built with cutting-edge technologies'
-    },
-    {
-      icon: '🎨',
-      title: 'UI/UX Design',
-      description: 'User-centered design that converts visitors into customers'
-    },
-    {
-      icon: '📱',
-      title: 'Mobile Apps',
-      description: 'Native and cross-platform mobile applications'
-    },
-    {
-      icon: '🎯',
-      title: 'Branding & Posters',
-      description: 'Visual identity and marketing materials that stand out'
-    },
-    {
-      icon: '📝',
-      title: 'Content Creation',
-      description: 'Engaging content that tells your brand story'
-    },
-    {
-      icon: '🤖',
-      title: 'Generative AI',
-      description: 'AI-powered solutions to automate and enhance your workflow'
-    }
-  ];
+  
 
   const features = [
-    "10+ Years Experience",
-    "100+ Projects Delivered",
-    "24/7 Support",
-    "Global Reach"
+    "Human-Centered Design Approach",
+  "Agile & Scalable Development",
+  "Trusted by Global Startups & Brands"
   ];
 
   return (
@@ -111,32 +81,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Services</h2>
-            <p className="section-subtitle">
-              Comprehensive digital solutions tailored to your unique needs and goals
-            </p>
-          </div>
-          
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="service-card"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="service-icon">{service.icon}</div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
-      <div className="cta-section">
+      
+
+      {/* <div className="cta-section">
         <div className="container">
           <h2 className="cta-title">Ready to transform your ideas?</h2>
           <p className="cta-description">Let's build something extraordinary together</p>
@@ -144,7 +92,7 @@ const Home = () => {
             Start Your Project
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

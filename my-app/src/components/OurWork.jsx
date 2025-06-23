@@ -21,6 +21,8 @@ const workItems = [
 
 
 
+
+
 const OurWork = () => {
   return (
     <section className="our-work-section">
