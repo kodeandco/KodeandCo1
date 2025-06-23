@@ -2,27 +2,29 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <nav className="navbar">
-      <div className="logo">Kode & Co. </div>
-      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <ul>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <div className="logo">Kode & Co.</div>
+
       <div className="hamburger" onClick={toggleMenu}>
-        <span className={isOpen ? 'line open' : 'line'}></span>
-        <span className={isOpen ? 'line open' : 'line'}></span>
-        <span className={isOpen ? 'line open' : 'line'}></span>
+        <span className="line"></span>
+        <span className="line"></span>
+        <span className="line"></span>
+      </div>
+
+      <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <ul>
+          <li><a href="#services" onClick={toggleMenu}>Services</a></li>
+          <li><a href="#portfolio" onClick={toggleMenu}>Portfolio</a></li>
+          <li><a href="#about" onClick={toggleMenu}>About</a></li>
+          <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+        </ul>
       </div>
     </nav>
   );
