@@ -88,4 +88,7 @@
     padding: 1rem 0;
     gap: 1rem;
   }
+  html {
+  scroll-behavior: smooth;
+}
 }
