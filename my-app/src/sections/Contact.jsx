@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 import Navbar from '../components/Navbar';
 import './Contact.css';
 
@@ -15,11 +14,11 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      
+    
+   
       <div id="contact" className="contact-container">
         <div className="contact-content">
-          {/* Left Side: Heading */}
+          {/* Heading */}
           <motion.div
             className="contact-heading"
             initial="hidden"
@@ -31,12 +30,10 @@ export default function Contact() {
             <p>Drop us a message and we’ll get back to you soon!</p>
           </motion.div>
 
-          {/* Right Side: Form */}
+          {/* Contact Form */}
           <motion.form
-            name="contact"
+            action="https://formspree.io/f/xnnvgwkg"  // <-- Replace with your actual Formspree endpoint
             method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             className="contact-form"
             initial="hidden"
             whileInView="visible"
@@ -44,9 +41,6 @@ export default function Contact() {
             variants={fadeInUp}
             custom={1}
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" />
-
             <input
               type="text"
               name="name"
@@ -65,7 +59,6 @@ export default function Contact() {
               rows="6"
               required
             ></textarea>
-
             <button type="submit">Send Message</button>
           </motion.form>
         </div>
@@ -80,28 +73,29 @@ export default function Contact() {
           custom={2}
         >
           <a
-            href="https://linkedin.com/in/maanvishadakshari"
+            href="mailto:hello.kodeandco@gmail.com"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn
+            Gmail
           </a>
           <a
-            href="https://github.com/maanvishadakshari"
+            href="https://www.instagram.com/kode.and.co/"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            Instagram
           </a>
           <a
-            href="https://behance.net/maanvishadakshari"
-            target="_blank"
+            href="#"
+            onClick={(e) => e.preventDefault()}
+             target="_blank"
             rel="noreferrer"
           >
-            Behance
+            LinkedIn 
           </a>
         </motion.div>
       </div>
-    </div>
+ 
   );
 }

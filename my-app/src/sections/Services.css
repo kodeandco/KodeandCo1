@@ -1,6 +1,5 @@
 .services-section {
-  padding: 5rem 2rem;
-  background-color: var(--background-color);
+  padding: 0.08rem 5rem 2rem;
   color: var(--color-cream);
   font-family: var(--font-main);
   text-align: center;
@@ -9,21 +8,29 @@
 .services-title {
   font-size: 2.8rem;
   font-family: var(--font-heading);
+    color: var(--color-olive);
   margin-bottom: 0.5rem;
 }
 
 .services-subtitle {
   font-size: 1.1rem;
-  color: #bcbcbc;
+  color: var(--color-cream);
   margin-bottom: 3rem;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 0 1rem;
 }
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Service Card */
 .service-card {

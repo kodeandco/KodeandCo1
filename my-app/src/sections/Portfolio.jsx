@@ -3,19 +3,17 @@ import './Portfolio.css'; // we'll create this for custom styling
 
 const workItems = [
   {
-    title: "Web Development",
-    description: "Custom websites that blend creativity with functionality.",
-    image: "https://placehold.co/400x250?text=Web+Development"
+    title: "UI/UX",
+    image: "https://placehold.co/400x250?text=Website+Redesign"
+  },
+  
+  {
+    title: "Website Development",
+    image: "https://placehold.co/400x250?text=Full+Website"
   },
   {
-    title: "Mobile Apps",
-    description: "Intuitive and scalable applications for all platforms.",
-    image: "https://placehold.co/400x250?text=Mobile+Apps"
-  },
-  {
-    title: "Data Dashboards",
-    description: "Visual, real-time dashboards to track your metrics.",
-    image: "https://placehold.co/400x250?text=Dashboards"
+    title: "Inventory Management System",
+    image: "https://placehold.co/400x250?text=Inventory+System"
   }
 ];
 
