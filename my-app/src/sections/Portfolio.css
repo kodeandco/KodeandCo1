@@ -1,16 +1,15 @@
 .our-work-section {
-  padding: 5rem 2rem;
-  background-color: #0b0b0b;
-  color: var(--color-cream);
+  padding:0.08rem 2rem 1.5rem;
+  color: var(--color-olive) !important;
   font-family: var(--font-main);
   width: 100vw;
-  box-sizing: border-box;
+  
 }
 
 .our-work-title {
   font-size: 3rem;
   font-family: var(--font-heading);
-  color: var(--color-cream);
+  color: var(--color-cream) !important;
   margin-bottom: 1rem;
   font-weight: 700;
   text-align: center;
@@ -18,7 +17,7 @@
 
 .our-work-subtitle {
   font-size: 1.2rem;
-  color: #c4c4c4;
+  color: var(--color-cream) !important;
   margin-bottom: 3rem;
   text-align: center;
   font-family: var(--font-main);

@@ -10,7 +10,7 @@
 .our-work-title {
   font-size: 3rem;
   font-family: var(--font-heading);
-  color: var(--color-cream);
+  color: var(--color-olive);
   margin-bottom: 1rem;
   font-weight: 700;
   text-align: center;
@@ -18,7 +18,7 @@
 
 .our-work-subtitle {
   font-size: 1.2rem;
-  color: #c4c4c4;
+  color: var(--color-cream);
   margin-bottom: 3rem;
   text-align: center;
   font-family: var(--font-main);

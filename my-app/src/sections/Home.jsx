@@ -18,10 +18,11 @@ const Home = () => {
   }, []);
 
   const features = [
-    "Human-Centered Design Approach",
-    "Agile & Scalable Development", 
-    "Trusted by Global Startups & Brands"
-  ];
+  "Pixel-Perfect UI Implementation",
+  "Proven Tech Stack Expertise",
+  "Continuous Collaboration & Support"
+];
+
 
   // Carefully positioned icons to avoid overlap with main content
   const floatingIcons = [

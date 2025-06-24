@@ -1,8 +1,7 @@
 .contact-container {
-  background-color: var(--color-black);
   color: var(--color-cream);
   font-family: var(--font-main);
-  padding: 4rem 1.5rem;
+  padding: 0.08rem 4rem 1.5rem;
 }
 
 /* Flex Layout */
