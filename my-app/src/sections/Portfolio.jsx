@@ -4,16 +4,16 @@ import './Portfolio.css'; // we'll create this for custom styling
 const workItems = [
   {
     title: "UI/UX",
-    image: "https://placehold.co/400x250?text=Website+Redesign"
+    image: "https://i.pinimg.com/736x/a4/dc/8c/a4dc8c5692a9a405814e17302b6d8067.jpg"
   },
   
   {
     title: "Website Development",
-    image: "https://placehold.co/400x250?text=Full+Website"
+    image: "https://i.pinimg.com/736x/00/5d/ef/005defa1ed9df07016f6e9f35641c88f.jpg"
   },
   {
     title: "Inventory Management System",
-    image: "https://placehold.co/400x250?text=Inventory+System"
+    image: "https://i.pinimg.com/736x/d0/6d/e4/d06de4008a611aea685ad75236aa2300.jpg"
   }
 ];
 
