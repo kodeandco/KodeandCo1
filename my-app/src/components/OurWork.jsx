@@ -1,41 +1,59 @@
 import React from 'react';
-import './OurWork.css'; // we'll create this for custom styling
+import { useNavigate } from 'react-router-dom';
+import Button1 from './Button1';
+import './OurWork.css';
 
-const workItems = [
+const workCategories = [
   {
+    id: 'uiux',
+    title: "UI/UX Design",
+    description: "Crafting intuitive and visually stunning user experiences.",
+    image: "src/assets/uiux.png",
+    route: '/portfolio/uiux'
+  },
+  {
+    id: 'webdev',
     title: "Web Development",
     description: "Custom websites that blend creativity with functionality.",
-    image: "https://placehold.co/400x250?text=Web+Development"
+    image: "src/assets/web.png",
+    route: '/portfolio/webdev'
   },
   {
-    title: "Mobile Apps",
-    description: "Intuitive and scalable applications for all platforms.",
-    image: "https://placehold.co/400x250?text=Mobile+Apps"
-  },
-  {
-    title: "Data Dashboards",
-    description: "Visual, real-time dashboards to track your metrics.",
-    image: "https://placehold.co/400x250?text=Dashboards"
+    id: 'poster',
+    title: "Poster Design",
+    description: "Eye-catching visual designs for marketing and branding.",
+    image: "src/assets/post.png",
+    route: '/portfolio/poster'
   }
 ];
 
-
-
-
-
 const OurWork = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (route) => {
+    navigate(route);
+  };
+
   return (
     <section className="our-work-section">
       <div className="container">
-<h2 className="our-work-title">Our Work</h2>
-<p className="our-work-subtitle">Showcasing our digital craftsmanship across platforms.</p>
+        <h2 className="our-work-title">Our Work</h2>
+        <p className="our-work-subtitle">Showcasing our digital craftsmanship across platforms.</p>
         
         <div className="work-grid">
-          {workItems.map((item, index) => (
+          {workCategories.map((category, index) => (
             <div className="work-card" key={index}>
-              <img src={item.image} alt={item.title} className="work-image" />
-              <h3 className="work-title">{item.title}</h3>
-              <p className="work-desc">{item.description}</p>
+              <img src={category.image} alt={category.title} className="work-image" />
+              <div className="work-content">
+                <h3 className="work-title">{category.title}</h3>
+                <p className="work-desc">{category.description}</p>
+                <div className="work-button">
+                  <Button1 
+                    text="View Portfolio" 
+                    onClick={() => handleCategoryClick(category.route)}
+                  />
+                </div>
+              </div>
             </div>
           ))}
         </div>
