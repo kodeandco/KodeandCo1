@@ -2,9 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button1 from './Button1';
 import './OurWork.css';
-// import '/assets/uiux.png';
-// import  '/assets/web.png';
-// import '/assets/post.png';
+
 const workCategories = [
   {
     id: 'uiux',
@@ -17,7 +15,7 @@ const workCategories = [
     id: 'webdev',
     title: "Web Development",
     description: "Custom websites that blend creativity with functionality.",
-    image: "src/assets/web.png",
+    image: "./assets/web.png",
     route: '/portfolio/webdev'
   },
   {
