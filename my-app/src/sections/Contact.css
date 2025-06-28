@@ -42,6 +42,7 @@
 .contact-form {
   flex: 1;
   min-width: 320px;
+  width: 100%; /* Add this */
   max-width: 600px;
   padding: 2rem;
   background-color: #111111;
@@ -51,7 +52,9 @@
   flex-direction: column;
   gap: 1.2rem;
   transition: all 0.3s ease-in-out;
+  box-sizing: border-box; /* Important for padding control */
 }
+
 
 .contact-form input,
 .contact-form textarea {
@@ -140,6 +143,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contact-container {
+    padding: 2rem 1.5rem; /* More breathing room on small screens */
+  }
+
   .contact-content {
     flex-direction: column;
     align-items: center;
@@ -148,5 +155,14 @@
 
   .contact-heading {
     text-align: center;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 1.2rem;
   }
 }
