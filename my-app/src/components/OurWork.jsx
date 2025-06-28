@@ -2,9 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button1 from './Button1';
 import './OurWork.css';
-import '../assets/uiux.png';
-import  '../assets/web.png';
-import '../assets/post.png';
+import './assets/uiux.png';
+import  './assets/web.png';
+import './assets/post.png';
 const workCategories = [
   {
     id: 'uiux',
