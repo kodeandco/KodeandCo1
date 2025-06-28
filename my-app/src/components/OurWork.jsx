@@ -2,27 +2,31 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button1 from './Button1';
 import './OurWork.css';
+// Import images properly
+import uiuxImage from '../assets/uiux.png';
+import webImage from '../assets/web.png';
+import postImage from '../assets/post.png';
 
 const workCategories = [
   {
     id: 'uiux',
     title: "UI/UX Design",
     description: "Crafting intuitive and visually stunning user experiences.",
-    image: "src/assets/uiux.png",
+    image: uiuxImage,
     route: '/portfolio/uiux'
   },
   {
     id: 'webdev',
     title: "Web Development",
     description: "Custom websites that blend creativity with functionality.",
-    image: "./assets/web.png",
+    image: webImage,
     route: '/portfolio/webdev'
   },
   {
     id: 'poster',
     title: "Poster Design",
     description: "Eye-catching visual designs for marketing and branding.",
-    image: "src/assets/post.png",
+    image: postImage,
     route: '/portfolio/poster'
   }
 ];
