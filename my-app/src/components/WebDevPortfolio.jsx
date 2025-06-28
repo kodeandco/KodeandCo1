@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button2 from './Button2';
 import './PortfolioPage.css';
@@ -15,7 +15,12 @@ import wd8 from '../assets/wd8.jpg'; // E-commerce Kalakshetra
 import wd9 from '../assets/wd9.jpg'; // Campus Crave - College Canteen Automation
 import wd10 from '../assets/wd10.jpg'; // Campus Crave - College Canteen Automation
 import wd11 from '../assets/wd11.jpg'; // Campus Crave - College Canteen Automation
-
+import wd12 from '../assets/wd12.png';
+// import wd13 from '../assets/wd13.png';
+import wd15 from '../assets/wd15.png'; 
+import wd16 from '../assets/wd16.png'; 
+import wd17 from '../assets/wd17.png'; 
+import wd18 from '../assets/wd18.png'; 
 const webdevProjects = [
   {
     id: 1,
@@ -63,7 +68,7 @@ const webdevProjects = [
     description: "Cultural arts e-commerce platform showcasing traditional crafts and artworks",
     image: wd6,
     tags: ["E-commerce", "Cultural Arts", "React"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 7,
@@ -71,7 +76,7 @@ const webdevProjects = [
     description: "Comprehensive product catalog with advanced filtering and cultural storytelling",
     image: wd7,
     tags: ["Catalog", "Cultural", "MongoDB"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 8,
@@ -79,7 +84,7 @@ const webdevProjects = [
     description: "Multi-vendor marketplace connecting traditional artists with global audiences",
     image: wd8,
     tags: ["Marketplace", "Artists", "Multi-vendor"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 9,
@@ -87,7 +92,7 @@ const webdevProjects = [
     description: "Smart college canteen management system with automated ordering and inventory",
     image: wd9,
     tags: ["Automation", "College", "Food Service"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 10,
@@ -95,7 +100,7 @@ const webdevProjects = [
     description: "Student-focused interface for easy food ordering and meal planning",
     image: wd10,
     tags: ["Student Portal", "Food Planning", "Campus"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 11,
@@ -103,14 +108,65 @@ const webdevProjects = [
     description: "Comprehensive admin dashboard for canteen operations and analytics",
     image: wd11,
     tags: ["Admin Dashboard", "Analytics", "Operations"],
-    year: "2023"
+    year: "2025"
+  },
+  {
+    id: 12,
+    title: "Kalakshetra - Homepage",
+    description: "Showcasing the rich cultural heritage of India through a modern web experience",
+    image: wd12,
+    tags: ["Cultural", "Heritage", "React"],
+    year: "2025"
+  },
+  // {
+  //   id: 13,
+  //   title: "Campus Crave - Admin Dashboard",
+  //   description: "Comprehensive admin dashboard for canteen operations and analytics",
+  //   image: wd13,
+  //   tags: ["Admin Dashboard", "Analytics", "Operations"],
+  //   year: "2025"
+  // },
+ 
+   {
+    id: 17,
+    title: "Kalakshetra- Shop Now",
+    description: "Explore and shop for traditional Indian crafts and artworks",
+    image: wd17,
+    tags: ["Cultural", "Heritage", "Shop"],
+    year: "2025"
+  },
+   {
+    id: 15,
+    title: "Kalakshetra - Cart",
+    description: "Shopping cart functionality for managing selected traditional crafts",
+    image: wd15,
+    tags: ["E-commerce", "Cart", "Cultural"],
+    year: "2025"
+  }, 
+    {
+    id: 16,
+    title: "Kalakshetra - Checkout",
+    description: "Seamless checkout experience for purchasing traditional crafts",
+    image: wd16,
+    tags: ["E-commerce", "Checkout", "Cultural"],
+    year: "2025"
+  },
+  
+    {
+    id: 18,
+    title: "Kalakshetra - Product Description",
+    description: "Detailed product descriptions highlighting the craftsmanship and cultural significance of each item",
+    image: wd18,
+    tags: ["Product Description", "Cultural", "E-commerce"],
+    year: "2025"
   }
 ];
 
 const WebDevPortfolio = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+  const [modalImage, setModalImage] = useState(null);
 
-  return (
+   return (
     <div className="portfolio-page">
       <div className="container">
         <div className="portfolio-header">
@@ -124,7 +180,10 @@ const WebDevPortfolio = () => {
         <div className="portfolio-grid">
           {webdevProjects.map((project) => (
             <div className="portfolio-item" key={project.id}>
-              <div className="portfolio-image-container">
+              <div
+                className="portfolio-image-container"
+                onClick={() => setModalImage(project.image)}
+              >
                 <img src={project.image} alt={project.title} className="portfolio-image" />
                 <div className="portfolio-overlay">
                   <div className="portfolio-year">{project.year}</div>
@@ -143,6 +202,13 @@ const WebDevPortfolio = () => {
           ))}
         </div>
       </div>
+
+      {modalImage && (
+        <div className="image-modal" onClick={() => setModalImage(null)}>
+          <span className="close-modal">&times;</span>
+          <img src={modalImage} alt="Full view" className="modal-image" />
+        </div>
+      )}
     </div>
   );
 };

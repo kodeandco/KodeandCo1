@@ -1,19 +1,15 @@
-
-// UIUXPortfolio.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button2 from './Button2';
 import './PortfolioPage.css';
-
-// Import your UI/UX images
-import u1 from '../assets/u1.png'; // Menu of cheesecake
-import u2 from '../assets/u2.png'; // Furniture
-import u3 from '../assets/u3.png'; // Dog adoption
-import u5 from '../assets/u5.png'; // Fike grocery app
-import u6 from '../assets/u6.png'; // Thrive website
-import u7 from '../assets/u7.png'; // Castellan website (rectangle)
-import u8 from '../assets/u8.png'; // Castellan website (rectangle)
-import u9 from '../assets/u9.png'; // Castellan website (rectangle)
+import u1 from '../assets/u1.png';
+import u2 from '../assets/u2.png';
+import u3 from '../assets/u3.png';
+import u5 from '../assets/u5.png';
+import u6 from '../assets/u6.png';
+import u7 from '../assets/u7.png';
+import u8 from '../assets/u8.png';
+import u9 from '../assets/u9.png';
 
 const uiuxProjects = [
   {
@@ -54,7 +50,7 @@ const uiuxProjects = [
     description: "Health and wellness platform promoting holistic lifestyle choices",
     image: u6,
     tags: ["Web Design", "Health", "Wellness"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 6,
@@ -62,7 +58,7 @@ const uiuxProjects = [
     description: "Professional business management interface with comprehensive dashboard",
     image: u7,
     tags: ["Business", "Dashboard", "Enterprise"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 7,
@@ -70,7 +66,7 @@ const uiuxProjects = [
     description: "Data visualization platform for business intelligence and reporting",
     image: u8,
     tags: ["Analytics", "Data Viz", "Business"],
-    year: "2023"
+    year: "2025"
   },
   {
     id: 8,
@@ -78,12 +74,13 @@ const uiuxProjects = [
     description: "Customer relationship management system with intuitive workflow design",
     image: u9,
     tags: ["CRM", "Enterprise", "Workflow"],
-    year: "2023"
+    year: "2025"
   }
 ];
 
 const UIUXPortfolio = () => {
   const navigate = useNavigate();
+  const [modalImage, setModalImage] = useState(null);
 
   return (
     <div className="portfolio-page">
@@ -99,7 +96,10 @@ const UIUXPortfolio = () => {
         <div className="portfolio-grid">
           {uiuxProjects.map((project) => (
             <div className="portfolio-item" key={project.id}>
-              <div className="portfolio-image-container">
+              <div
+                className="portfolio-image-container"
+                onClick={() => setModalImage(project.image)}
+              >
                 <img src={project.image} alt={project.title} className="portfolio-image" />
                 <div className="portfolio-overlay">
                   <div className="portfolio-year">{project.year}</div>
@@ -118,9 +118,15 @@ const UIUXPortfolio = () => {
           ))}
         </div>
       </div>
+
+      {modalImage && (
+        <div className="image-modal" onClick={() => setModalImage(null)}>
+          <span className="close-modal">&times;</span>
+          <img src={modalImage} alt="Full view" className="modal-image" />
+        </div>
+      )}
     </div>
   );
 };
 
 export default UIUXPortfolio;
-
