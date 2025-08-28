@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import GetStarted from './sections/GetStarted';
+import About from './sections/About';
 import Home from './sections/Home';
 import OurWork from './components/OurWork';
 import Services from './sections/Services';
@@ -24,6 +25,7 @@ const HomePage = () => {
         <OurWork/>
       </div>
       <div id="about">
+        <About/>
         <GetStarted/>
       </div>
       <div id="contact">
