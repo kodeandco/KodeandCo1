@@ -87,7 +87,7 @@ export default function About() {
                 </div>
               </div>
               <div className="founder-info">
-                <h3>Maanvi</h3>
+                <h3>Maanvi Shadakshari</h3>
                 <p className="founder-title">Co-Founder & Engineering Lead</p>
                 <p className="founder-description">
                   With a strong engineering background, Maanvi brings technical expertise 
@@ -112,7 +112,7 @@ export default function About() {
                 </div>
               </div>
               <div className="founder-info">
-                <h3>Sharon</h3>
+                <h3>Sharon Mishra</h3>
                 <p className="founder-title">Co-Founder & Strategy Director</p>
                 <p className="founder-description">
                   Sharon combines engineering precision with business acumen, creating 
