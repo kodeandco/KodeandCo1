@@ -177,18 +177,7 @@ export default function About() {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          className="cta-section"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          custom={1.6}
-        >
-          <h2>Ready to Build Something Amazing?</h2>
-          <p>Let's combine our engineering expertise with your vision to create exceptional digital experiences.</p>
-        </motion.div>
+     
       </div>
     </div>
   );
